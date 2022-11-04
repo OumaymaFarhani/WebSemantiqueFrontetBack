@@ -1,0 +1,885 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology"
+     xml:base="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:plante-ontology="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#est_coupée -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#est_coupée">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_main"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#ne_sont_pas_arrosées -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#ne_sont_pas_arrosées">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_arrosées_par"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#partagées_avec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#partagées_avec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#se_croiser_avec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#se_croiser_avec">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_arrosées_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_arrosées_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_placées -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_placées">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#couleur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#couleur">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#image -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#image">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#nom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#prix -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#prix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#quantité -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#quantité">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#taille -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#taille">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_main -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_main">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Outillage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Outillage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#est_coupée"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bois -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bois">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plastique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bois_naturel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bois_naturel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fibre_de_verre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fibre_de_verre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fleuries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fleuries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Outillage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Outillage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#est_coupée"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_main"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#partagées_avec"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#se_croiser_avec"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#ne_sont_pas_arrosées"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_extérieur">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_arrosées_par"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_arrosées_par"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plastique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plastique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#sont_placées"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Accessoires"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Résine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Résine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Succulentes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Succulentes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Tuyau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Tuyau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Verte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Verte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_intérieure"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Anthurium_Rouge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Anthurium_Rouge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fleuries"/>
+        <plante-ontology:couleur>rouge</plante-ontology:couleur>
+        <plante-ontology:description>plante d&apos;origine tropicale que l&apos;on retrouve dans nos intérieurs très fréquemment.</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/278-large_default/anthurium-rouge.jpg</plante-ontology:image>
+        <plante-ontology:nom>Anthurium Rouge</plante-ontology:nom>
+        <plante-ontology:prix>35,000 TND</plante-ontology:prix>
+        <plante-ontology:taille>10 L</plante-ontology:taille>
+        <plante-ontology:taille>15 L</plante-ontology:taille>
+        <plante-ontology:taille>5 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arroseur_Multifonction_Pistolet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arroseur_Multifonction_Pistolet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+        <plante-ontology:couleur>orange</plante-ontology:couleur>
+        <plante-ontology:description>En polyethylène pour plus de robustesse</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/1394-large_default/arroseur-multifonction-pistolet-.jpg</plante-ontology:image>
+        <plante-ontology:nom>Arroseur Multifonction Pistolet</plante-ontology:nom>
+        <plante-ontology:prix>36,000 TND</plante-ontology:prix>
+        <plante-ontology:taille>5 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir_extra_fort_Bellijardin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir_extra_fort_Bellijardin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+        <plante-ontology:couleur>bleu</plante-ontology:couleur>
+        <plante-ontology:description>En polyethylène pour plus de robustesse</plante-ontology:description>
+        <plante-ontology:image>https://photos.gammvert.fr/v5/products/full/54496-arrosoir-extra-fort-eda-l57cm-l19cm-h44cm-13l-taupe.jpg</plante-ontology:image>
+        <plante-ontology:nom>Arrosoir extra fort Bellijardin</plante-ontology:nom>
+        <plante-ontology:prix>40 Dt</plante-ontology:prix>
+        <plante-ontology:taille>13 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bougainvillier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bougainvillier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste"/>
+        <plante-ontology:couleur>rose</plante-ontology:couleur>
+        <plante-ontology:description>Bougainvillea est un genre d&apos;arbustes de la famille des Nyctaginaceae.</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/257-large_default/bougainvillier.jpg</plante-ontology:image>
+        <plante-ontology:nom>Bougainvillier</plante-ontology:nom>
+        <plante-ontology:prix>24,00</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</plante-ontology:quantité>
+        <plante-ontology:taille>conteneur 3L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#CHORISIA_SPECIOSA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#CHORISIA_SPECIOSA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>Ceiba speciosa est une espèce d’arbres de la famille des Malvaceae, à feuillage caduc, originaire des régions tropicales et subtropicales d’Amérique du Sud, où il est connu sous le nom de palo borracho ou árbol botella.</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/736x/f0/e6/be/f0e6be2f090f0f6de543685f728b3a22.jpg</plante-ontology:image>
+        <plante-ontology:nom>CHORISIA SPECIOSA</plante-ontology:nom>
+        <plante-ontology:prix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.00</plante-ontology:prix>
+        <plante-ontology:taille>Conteneur 7 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Cisaille_à_haies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Cisaille_à_haies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_main"/>
+        <plante-ontology:description>un outil incontournable</plante-ontology:description>
+        <plante-ontology:image>https://brico-direct.tn/12837-large_default/cisaille-a-haie-telescopique-valex-1486158.jpg</plante-ontology:image>
+        <plante-ontology:nom>Cisaille à haies</plante-ontology:nom>
+        <plante-ontology:prix rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">158</plante-ontology:prix>
+        <plante-ontology:taille rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Citron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Citron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique"/>
+        <plante-ontology:couleur>verte</plante-ontology:couleur>
+        <plante-ontology:description>Le citron est un agrume, fruit du citronnier. Il existe sous deux formes : le citron doux, fruit décoratif de cultivars à jus peu ou pas acide néanmoins classé Citrus limon Burm.</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/63/11/82/6311827b48553cab70458696a873f390.jpg</plante-ontology:image>
+        <plante-ontology:nom>Citron</plante-ontology:nom>
+        <plante-ontology:prix>70 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#DAMYL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#DAMYL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs"/>
+        <plante-ontology:couleur>blanc</plante-ontology:couleur>
+        <plante-ontology:description>Un programmateur est un appareil participant à des tâches de programmation (à ne pas confondre avec un &quot;programmeur&quot; qui est une personne qui développe des programmes).</plante-ontology:description>
+        <plante-ontology:image>https://jardinaddict.com/wp-content/uploads/2019/08/2-3-768x1014.jpg</plante-ontology:image>
+        <plante-ontology:nom>DAMYL</plante-ontology:nom>
+        <plante-ontology:prix>300 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</plante-ontology:quantité>
+        <plante-ontology:taille>5 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#FAUX_POIVRIER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#FAUX_POIVRIER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>une espèce d’arbres de la famille des Anacardiaceae originaire d&apos;Amérique du Sud.</plante-ontology:description>
+        <plante-ontology:image>https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Schinus_molle01.jpg/800px-Schinus_molle01.jpg</plante-ontology:image>
+        <plante-ontology:nom>FAUX POIVRIER</plante-ontology:nom>
+        <plante-ontology:prix>25,000</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</plante-ontology:quantité>
+        <plante-ontology:taille>Conteneur 7 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Flamme_Australienne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Flamme_Australienne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres"/>
+        <plante-ontology:couleur>rouge</plante-ontology:couleur>
+        <plante-ontology:description>un arbre au pot élancé et étalé et au feuillage caduc ou semi-persistant</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/66/65/16/666516a44ab3a635ea0488e247ecdd00.jpg</plante-ontology:image>
+        <plante-ontology:nom>Flamme Australienne</plante-ontology:nom>
+        <plante-ontology:prix>35,00</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</plante-ontology:quantité>
+        <plante-ontology:taille>Conteneur 7 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Jacaranda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Jacaranda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbres"/>
+        <plante-ontology:couleur>bleu</plante-ontology:couleur>
+        <plante-ontology:description>Jacaranda mimosifolia Blue Jacaranda Tree 10 seeds Seeds Blue Jacaranda mimosifolia. A sub-tropical deciduous tree native to South America that has been widely planted because of its and long-lasting…</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/4d/1c/8c/4d1c8c6097d1e07090a85462cfa2f47d.jpg</plante-ontology:image>
+        <plante-ontology:nom>Jacandra</plante-ontology:nom>
+        <plante-ontology:prix>190 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</plante-ontology:quantité>
+        <plante-ontology:taille>5 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#KALANCHOE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#KALANCHOE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fleuries"/>
+        <plante-ontology:couleur>rose</plante-ontology:couleur>
+        <plante-ontology:description>Le kalanchoé est une plante ornementale à feuillage décoratif</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/280-large_default/kalanchoe.jpg</plante-ontology:image>
+        <plante-ontology:nom>KALANCHOE</plante-ontology:nom>
+        <plante-ontology:prix>8,40</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</plante-ontology:quantité>
+        <plante-ontology:taille>5 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Karcher_WT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Karcher_WT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs"/>
+        <plante-ontology:couleur>Noire</plante-ontology:couleur>
+        <plante-ontology:description>WT 2 est équipée de 3 sorties d&apos;eau indépendante</plante-ontology:description>
+        <plante-ontology:image>https://s1.kaercher-media.com/products/26451740/main/1/d0.jpg</plante-ontology:image>
+        <plante-ontology:nom>Karcher WT</plante-ontology:nom>
+        <plante-ontology:prix>2,390.00 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</plante-ontology:quantité>
+        <plante-ontology:taille>6 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#MARANTA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#MARANTA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Fleuries"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>plantes monocotylédones de la famille des Marantaceae</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/1183-large_default/maranta-.jpg</plante-ontology:image>
+        <plante-ontology:nom>MARANTA</plante-ontology:nom>
+        <plante-ontology:prix>29,00</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</plante-ontology:quantité>
+        <plante-ontology:taille>25 cm</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Menthe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Menthe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique"/>
+        <plante-ontology:couleur>verte</plante-ontology:couleur>
+        <plante-ontology:description>Les menthes forment un genre de plantes herbacées vivaces de la famille des Lamiacées, sous-famille des Nepetoideae, tribu des Mentheae, sous-tribu des Menthinae</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/d1/1c/82/d11c82c0e6f90da9c7b26d84c34c853f.jpg</plante-ontology:image>
+        <plante-ontology:nom>Menthe</plante-ontology:nom>
+        <plante-ontology:prix>4 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#PALMIER_NAIN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#PALMIER_NAIN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>un palmier de petite taille, originaire des régions bordant la mer Méditerranée occidentale.</plante-ontology:description>
+        <plante-ontology:image>https://www.promofleur.fr/13411-large_default/palmier-nain-chamaerops-humilis-h100-cm.jpg</plante-ontology:image>
+        <plante-ontology:nom>PALMIER NAIN</plante-ontology:nom>
+        <plante-ontology:prix>30 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</plante-ontology:quantité>
+        <plante-ontology:taille>Conteneur 7 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#POT_SUSPENDU_SOUPLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#POT_SUSPENDU_SOUPLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plastique"/>
+        <plante-ontology:couleur>bleu</plante-ontology:couleur>
+        <plante-ontology:couleur>rose</plante-ontology:couleur>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>Cache-pot suspendu souple permet de gagner de l&apos;espace au sol tout en créant un bel assemblage de plantes</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/1374-large_default/pot-suspendu-souple-.jpg</plante-ontology:image>
+        <plante-ontology:nom>POT SUSPENDU SOUPLE</plante-ontology:nom>
+        <plante-ontology:prix>3,570 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Persil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Persil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique"/>
+        <plante-ontology:couleur>verte</plante-ontology:couleur>
+        <plante-ontology:description>Le persil est une plante aromatique facile de culture. Entretien, plantation et semis, récolte et utlisation, voici comment cultiver le persil.</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/fe/ef/3d/feef3d2cdc3860100e21a7934abc7420.jpg</plante-ontology:image>
+        <plante-ontology:nom>persil</plante-ontology:nom>
+        <plante-ontology:prix>3 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pot_en_résine_cubique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pot_en_résine_cubique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Résine"/>
+        <plante-ontology:couleur>jaune</plante-ontology:couleur>
+        <plante-ontology:description>pot à résine est un récipient en terre cuite destiné à recevoir la résine qui s&apos;écoule de la care d&apos;un pin gemmé.</plante-ontology:description>
+        <plante-ontology:image>https://www.tanitdeco.com/web/uploads//products/pot-en-resine-cubique-amenagement-du-jardin-archibat-expo-sarl-meubles-tunisie-3293.jpg</plante-ontology:image>
+        <plante-ontology:nom>Pot en résine cubique</plante-ontology:nom>
+        <plante-ontology:prix>65 dt</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Solanum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Solanum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste"/>
+        <plante-ontology:couleur>blanc</plante-ontology:couleur>
+        <plante-ontology:description>Solanum est un genre de plantes dicotylédones de la famille des Solanaceae</plante-ontology:description>
+        <plante-ontology:image>https://www.jardiner-malin.fr/wp-content/uploads/2020/06/solanum-jasminoides.jpg</plante-ontology:image>
+        <plante-ontology:nom>Solanum</plante-ontology:nom>
+        <plante-ontology:prix>22,000 TND</plante-ontology:prix>
+        <plante-ontology:taille>10 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Strelitzia_Augusta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Strelitzia_Augusta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arbuste"/>
+        <plante-ontology:couleur>verte</plante-ontology:couleur>
+        <plante-ontology:description>la Strelitzia reginae est une espèce de plantes ornementales de la famille des Strelitziaceae.</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/214-large_default/strelizia-augusta.jpg</plante-ontology:image>
+        <plante-ontology:nom>Strelitzia Augusta</plante-ontology:nom>
+        <plante-ontology:prix>135,000 TND</plante-ontology:prix>
+        <plante-ontology:quantité>10 L</plante-ontology:quantité>
+        <plante-ontology:taille>2 m</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#TIGE_DE_BAMBOU_ARTIFICIELLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#TIGE_DE_BAMBOU_ARTIFICIELLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plante_artificielles"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>Optez pour une décoration à la fois artificielle et minimaliste avec cette tige de bambou artificielle de 110cm plus vraie que nature.</plante-ontology:description>
+        <plante-ontology:image>https://bambouenfrance.fr/wp-content/uploads/2020/12/Bambou-artificiel-Maia-shop.jpg</plante-ontology:image>
+        <plante-ontology:nom>TIGE DE BAMBOU ARTIFICIELLE</plante-ontology:nom>
+        <plante-ontology:prix>29,00 TND</plante-ontology:prix>
+        <plante-ontology:taille rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Tronçonneuse_à_batterie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Tronçonneuse_à_batterie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#A_moteur"/>
+        <plante-ontology:description>Lubrification automatique de la chaîne</plante-ontology:description>
+        <plante-ontology:image>https://photos.gammvert.fr/v5/products/full/50661-tronconneuse-a-batterie-18-v-ryobi-5.jpg</plante-ontology:image>
+        <plante-ontology:nom>Tronçonneuse à batterie</plante-ontology:nom>
+        <plante-ontology:prix>200 TND</plante-ontology:prix>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#YOSOO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#YOSOO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs"/>
+        <plante-ontology:couleur>noir</plante-ontology:couleur>
+        <plante-ontology:description>système d&apos;arrosage automatique pour plantes d&apos;intérieur Micro kit d&apos;irrigation goutte à goutte automatique minuterie</plante-ontology:description>
+        <plante-ontology:image>https://media.adeo.com/media/1408947/comment-choisir-sa-minuterie-jpg5c17ad9f45a8dc00011ee7d9.jpg</plante-ontology:image>
+        <plante-ontology:nom>YOSOO</plante-ontology:nom>
+        <plante-ontology:prix>370 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</plante-ontology:quantité>
+        <plante-ontology:taille>7L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#arrosoir-extra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#arrosoir-extra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Arrosoir"/>
+        <plante-ontology:couleur>noir</plante-ontology:couleur>
+        <plante-ontology:description>L’arrosage par aspersion est une technique d’arrosage qui est devenue courante.</plante-ontology:description>
+        <plante-ontology:image>https://m.media-amazon.com/images/I/41-2kklkH8L._SL500_.jpg</plante-ontology:image>
+        <plante-ontology:nom>arrosoir-extra</plante-ontology:nom>
+        <plante-ontology:prix>250 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</plante-ontology:quantité>
+        <plante-ontology:taille>6 L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#orange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#orange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Aromatique"/>
+        <plante-ontology:couleur>verte</plante-ontology:couleur>
+        <plante-ontology:description>L’orange ou orange douce est le fruit de l&apos;oranger de la famille des Rutacées. Comme pour tous les agrumes, il s&apos;agit d&apos;une forme particulière de baie appelée hespéride.</plante-ontology:description>
+        <plante-ontology:image>https://i.pinimg.com/564x/fc/cf/37/fccf37b8fb841f141dd7b29b07f70588.jpg</plante-ontology:image>
+        <plante-ontology:nom>orange</plante-ontology:nom>
+        <plante-ontology:prix>70 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</plante-ontology:quantité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#pot_de_fleurs_carré -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#pot_de_fleurs_carré">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Bois"/>
+        <plante-ontology:description>La boîte est livrée non décorée, peut être colorée ou personnalisée</plante-ontology:description>
+        <plante-ontology:image>https://m.media-amazon.com/images/I/71J-Jy9hphL._AC_SL1500_.jpg</plante-ontology:image>
+        <plante-ontology:nom>pot de fleurs carré en bois</plante-ontology:nom>
+        <plante-ontology:prix>20 dt</plante-ontology:prix>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#vidaXL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#vidaXL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Programmateurs"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:description>Système d&apos;irrigation automatique avec gicleur et minuterie</plante-ontology:description>
+        <plante-ontology:image>https://www.darty.com/darty-et-vous/sites/default/files/thumbnails/image/systeme-arrosage-automatique-plantes-pot.jpg</plante-ontology:image>
+        <plante-ontology:nom>vidaXL</plante-ontology:nom>
+        <plante-ontology:prix>500 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</plante-ontology:quantité>
+        <plante-ontology:taille>10L</plante-ontology:taille>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#KIT_TUYAU_D&apos;ARROSAGE_ECONOMIC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#KIT_TUYAU_D&apos;ARROSAGE_ECONOMIC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Tuyau"/>
+        <plante-ontology:couleur>vert</plante-ontology:couleur>
+        <plante-ontology:image>https://www.10000articles.shop/images/thumbs/0010264_tuyau-darrosage-d58-kit-50m.jpeg</plante-ontology:image>
+        <plante-ontology:nom>15 métres</plante-ontology:nom>
+        <plante-ontology:nom>KIT TUYAU D&apos;ARROSAGE ECONOMIC</plante-ontology:nom>
+        <plante-ontology:prix>65,00 TND</plante-ontology:prix>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pot_Vega_Terrracotta_&amp;_Sous-Pot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Pot_Vega_Terrracotta_&amp;_Sous-Pot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#Plastique"/>
+        <plante-ontology:couleur>marron</plante-ontology:couleur>
+        <plante-ontology:couleur>noir</plante-ontology:couleur>
+        <plante-ontology:description>Les graines sont vendues par Alchimiaweb.com comme des souvenirs dans les pays où la culture du cannabis est illégale</plante-ontology:description>
+        <plante-ontology:image>https://www.boutique.bencheikhgarden.tn/472-large_default/pot-sous-pot-vega-terracotta.jpg</plante-ontology:image>
+        <plante-ontology:nom>Pot Vega Terrracotta &amp; Sous-Pot</plante-ontology:nom>
+        <plante-ontology:prix>19,635 TND</plante-ontology:prix>
+        <plante-ontology:quantité rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</plante-ontology:quantité>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
