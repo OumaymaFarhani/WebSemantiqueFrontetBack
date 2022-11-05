@@ -120,31 +120,22 @@ const Button = styled.button`
       background-color: #f8f4f4;
   }
 `;
-export const  Plante =() => {
-const [DataPlante, setDataPlante] = useState([]);
-  useEffect(()=>{
-    axios.get('http://localhost:8089/getArbres',{})
-    .then(res =>{
-        setDataPlante(res.data)
-    });
-  },[]);
-
-  const [DataPlante1, setDataPlante1] = useState([]);
-  useEffect(()=>{
-    axios.get('http://localhost:8089/getArbuste',{})
-    .then(res =>{
-        setDataPlante1(res.data)
-    });
-  },[]);
-  const [DataPlante2, setDataPlante2] = useState([]);
-  useEffect(()=>{
-    axios.get('http://localhost:8089/getAromatique',{})
-    .then(res =>{
-        setDataPlante2(res.data)
-    });
-  },[]);
-
-
+export const  Outillages =() => {
+    const [DataPlante, setDataPlante] = useState([]);
+    useEffect(()=>{
+      axios.get('http://localhost:8089/getAMain',{})
+      .then(res =>{
+          setDataPlante(res.data)
+      });
+    },[]);
+    const [DataPlante1, setDataPlante1] = useState([]);
+    useEffect(()=>{
+      axios.get('http://localhost:8089/getAMoteur',{})
+      .then(res =>{
+          setDataPlante1(res.data)
+      });
+    },[]);
+ 
 return(
     <>
       <Navbar />
@@ -240,50 +231,7 @@ return(
      )
     })}
 
-{DataPlante2.map((item) => {
-        return( <Container>
-         
-    
-      <Wrapper>
-      <ImgContainer>
-             <Image  src={item.image} alt="..."/>
-      </ImgContainer>
-      <InfoContainer>
-          <Title>{item.item}</Title>
-          <Desc>
-          {item.description}
-          </Desc>
-          <Price>{item.prix}</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>{item.couleur}</FilterTitle>
-              <FilterColor color="green" />
-              <FilterColor color="darkgrey" />
-              <FilterColor color="gray" />
-            </Filter>
-            <Filter>
-              <FilterTitle>Taille</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>Pot 12 - Haut 45</FilterSizeOption>
-                <FilterSizeOption>Pot 17 - Haut 70cm</FilterSizeOption>
-             
-              </FilterSize>
-            </Filter>
-          </FilterContainer>
-          <AddContainer>
-            <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
-            </AmountContainer>
-            <Button>AJOUTER AU PANIER</Button>
-          </AddContainer>
-        </InfoContainer>
-      </Wrapper>
-      
-    </Container>
-     )
-    })}
+
 </>
 
 )

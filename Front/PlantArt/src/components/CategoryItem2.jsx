@@ -37,21 +37,19 @@ color:gray;
 cursor: pointer;
 font-weight: 600;
 `
-export const CategoryItem = ({item}) => {
+export const CategoryItem2 = ({item}) => {
     return (
         <Container >
             <Image src={item.img} />
             <Info>
                 <Title>{item.title}</Title>
-                
-                      <div className='row justify-content-md-center'>
+                <div className='row justify-content-md-center'>
                       <Link style={{textDecoration:"none",color:"inherit"}} to={item.route}>
                         <Button>View</Button></Link>
                        <span>   </span>
                        <Link style={{textDecoration:"none",color:"inherit"}} to={item.route1}>
                         <Button>View Details</Button></Link>
                         </div>
-
             </Info>
         </Container>
     )

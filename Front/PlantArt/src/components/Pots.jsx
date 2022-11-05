@@ -13,52 +13,53 @@ const Container = styled.div`
 const Title = styled.h1`
   margin: 10px;
 `;
-export const Products = () => {
+export const Pots = () => {
     const [DataPlante, setDataPlante] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getArbres',{})
+    axios.get('http://localhost:8089/getRésine',{})
     .then(res =>{
         setDataPlante(res.data)
     });
   },[]);
   const [DataPlante1, setDataPlante1] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getArbuste',{})
+    axios.get('http://localhost:8089/getPlastique',{})
     .then(res =>{
         setDataPlante1(res.data)
     });
   },[]);
   const [DataPlante2, setDataPlante2] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getAromatique',{})
+    axios.get('http://localhost:8089/getBois',{})
     .then(res =>{
         setDataPlante2(res.data)
     });
   },[]);
+ 
     return (
         <>
         <Container>
-        <Title>ARBRES</Title>
+        <Title>RESINE</Title>
             {DataPlante.map((item) =>(
                 <Product item={item} key={item.id} />
 
             ))}
             </Container>
             <Container>
-            <Title>ARBUSTES</Title>
+            <Title>PLASTIQUE</Title>
              {DataPlante1.map((item) =>(
                 <Product item={item} key={item.id} />
-                
 
             ))}
             </Container>
             <Container>
-            <Title>AROMATIQUES</Title>
+            <Title>BOIS</Title>
              {DataPlante2.map((item) =>(
                 <Product item={item} key={item.id} />
 
             ))}
-        </Container>
+            </Container>
+          
         </>
     )
 }

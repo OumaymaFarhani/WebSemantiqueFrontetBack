@@ -68,19 +68,50 @@ export const categories = [
       id: 1,
       img: "https://images.pexels.com/photos/1781935/pexels-photo-1781935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "PLANTE EXTERIEUR",
-      route: "/planteExterieur"
+      route: "/planteExterieur",
+      route1: "/view"
     },
     {
       id: 2,
       img: "https://www.alicesgarden.fr/blog/wp-content/uploads/2021/01/plantes.jpg",
       title: "PLANTE INTERIEURE",
-      route: "/planteInterieur"
+      route: "/planteInterieur",
+      route1: "/view1"
     },
     {
       id: 3,
       img: "https://images.pexels.com/photos/1701535/pexels-photo-1701535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "PLANTE ARTIFICIELLES",
-      route: "/accessoires"
+      route: "/arrosage",
+      route1: "/view"
+    },
+  
+   
+   
+  ];
+  export const categories2 = [
+ 
+    
+    {
+      id: 1,
+      img: "https://blog.but.fr/wp-content/uploads/2022/05/01-choisir-pot-terrasse.jpg",
+      title: "POT",
+      route: "/pots",
+      route1: "/view2"
+    },
+    {
+      id: 2,
+      img: "https://img.freepik.com/photos-premium/outils-jardinage-pots-fleurs-prepares-mettre-dans-sol_290431-18824.jpg",
+      title: "OUTILLAGE",
+      route: "/outillages",
+      route1: "/view3"
+    },
+    {
+      id: 3,
+      img: "https://i.notretemps.com/2000x1125/smart/2022/07/20/arroser.jpeg",
+      title: "ARROSAGE",
+      route: "/arrosage",
+      route1: "/view4"
     },
   ];
   export const popularProducts = [

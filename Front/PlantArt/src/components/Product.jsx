@@ -70,6 +70,7 @@ export const Product = ({item}) => {
         <Container>
          <Circle />
       <Image src={item.image} />
+      
       <Info>
         <Icon>
           <ShoppingCartOutlined />
@@ -81,6 +82,7 @@ export const Product = ({item}) => {
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
+      
         </Container>
     )
 }

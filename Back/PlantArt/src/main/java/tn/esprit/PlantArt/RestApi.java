@@ -40,7 +40,96 @@ public class RestApi {
 	        List<JSONObject> resultSet = initJena.getItems(queryString);
 	        System.out.println(queryString);
 	        return resultSet;
+	 }
+ 	 @CrossOrigin
+	    @RequestMapping("/getTuyau")
+	    public List<JSONObject> getTuyau() {
+
+	        String queryString =
+	        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+	                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+	                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+	                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:Tuyau; pol:image ?U.}";
+	        List<JSONObject> resultSet = initJena.getItems1(queryString);
+	        System.out.println(queryString);
+	        return resultSet;
+ }
+	       
+	 //pots
+	   	 @CrossOrigin
+		    @RequestMapping("/getResine")
+		    public List<JSONObject> getResine() {
+
+		        String queryString =
+		        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+		                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+		                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+		                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:Résine; pol:image ?U.}";
+		        List<JSONObject> resultSet = initJena.getItems1(queryString);
+		        System.out.println(queryString);
+		        return resultSet;
 	    }
+	  	 @CrossOrigin
+		    @RequestMapping("/getPlastique")
+		    public List<JSONObject> getPlastique() {
+
+		        String queryString =
+		        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+		                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+		                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+		                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:Plastique; pol:image ?U.}";
+		        List<JSONObject> resultSet = initJena.getItems1(queryString);
+		        System.out.println(queryString);
+		        return resultSet;
+	    }
+	  	 @CrossOrigin
+		    @RequestMapping("/getBois")
+		    public List<JSONObject> getBois() {
+
+		        String queryString =
+		        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+		                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+		                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+		                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:Bois; pol:image ?U.}";
+		        List<JSONObject> resultSet = initJena.getItems1(queryString);
+		        System.out.println(queryString);
+		        return resultSet;
+	    }
+	  	 
+	  	 
+	  	 //outillage
+	  	 
+		 @CrossOrigin
+		    @RequestMapping("/getAMoteur")
+		    public List<JSONObject> getAMoteur() {
+
+		        String queryString =
+		        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+		                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+		                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+		                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:A_moteur; pol:image ?U.}";
+		        List<JSONObject> resultSet = initJena.getItems1(queryString);
+		        System.out.println(queryString);
+		        return resultSet;
+	    }
+	  	 
+		 @CrossOrigin
+		    @RequestMapping("/getAMain")
+		    public List<JSONObject> getAMain() {
+
+		        String queryString =
+		        		"PREFIX pol: <http://www.semanticweb.org/maisoninfo/ontologies/2022/9/plante-ontology#>" +
+		                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+		                        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>" +
+		                        "SELECT ?X ?U  WHERE{ ?X rdf:type pol:A_main; pol:image ?U.}";
+		        List<JSONObject> resultSet = initJena.getItems1(queryString);
+		        System.out.println(queryString);
+		        return resultSet;
+	    }
+	  	 
+	  	 
+	  	 
+	  	 
 	 //plante exterieur 
 	 
 	 @CrossOrigin

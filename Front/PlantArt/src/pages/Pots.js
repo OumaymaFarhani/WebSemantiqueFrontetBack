@@ -120,31 +120,29 @@ const Button = styled.button`
       background-color: #f8f4f4;
   }
 `;
-export const  Plante =() => {
-const [DataPlante, setDataPlante] = useState([]);
+export const  Pots =() => {
+    const [DataPlante, setDataPlante] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getArbres',{})
+    axios.get('http://localhost:8089/getRésine',{})
     .then(res =>{
         setDataPlante(res.data)
     });
   },[]);
-
   const [DataPlante1, setDataPlante1] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getArbuste',{})
+    axios.get('http://localhost:8089/getPlastique',{})
     .then(res =>{
         setDataPlante1(res.data)
     });
   },[]);
   const [DataPlante2, setDataPlante2] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:8089/getAromatique',{})
+    axios.get('http://localhost:8089/getBois',{})
     .then(res =>{
         setDataPlante2(res.data)
     });
   },[]);
-
-
+ 
 return(
     <>
       <Navbar />

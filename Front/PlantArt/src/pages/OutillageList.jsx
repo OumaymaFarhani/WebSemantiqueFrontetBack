@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { Newsletter } from "../components/Newsletter";
-import { Accessoire } from "../components/Accessoire";
+import { Outillages } from "../components/Outillages";
 
 import { Announcement } from '../components/Announcement'
 import { mobile } from "../responsive";
@@ -38,7 +38,7 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 
-export const AccessoiresList = () => {
+export const OutillageList = () => {
 
   
 
@@ -47,7 +47,7 @@ export const AccessoiresList = () => {
                  <Announcement/>
       <Navbar />
      
-      <Title>ARROSAGE</Title>
+      <Title>OUTILLAGE</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filtre :</FilterText>
@@ -72,8 +72,8 @@ export const AccessoiresList = () => {
             <Option disabled selected>
               Type
             </Option>
-            <Option>Arrosoir</Option>
-            <Option>Programmateurs</Option>
+            <Option>A Main</Option>
+            <Option>A Moteur</Option>
         
           </Select>
         </Filter>
@@ -86,7 +86,7 @@ export const AccessoiresList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Accessoire />
+      <Outillages />
       <Newsletter />
       <Footer />
     </Container>

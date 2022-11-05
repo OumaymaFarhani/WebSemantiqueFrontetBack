@@ -110,6 +110,33 @@ System.out.println(solution);
 	        return list;
 	    }
 
+
+	    public static List<JSONObject> getItems1(String queryString) {
+	        ResultSet resultSet = execQuery(queryString);
+	        List<JSONObject> list = new ArrayList<>();
+	        int x=0;
+	        while (resultSet.hasNext()) {
+	            x++;
+	            JSONObject obj = new JSONObject();
+	            QuerySolution solution = resultSet.nextSolution();
+	           
+	            obj.put("id",x);
+	            
+	            obj.put("item",solution.get("X").toString().split("#")[1]);
+	            obj.put("image",solution.get("U").toString().split("#")[0]);
+	          
+System.out.println(solution);
+	            
+	            list.add(obj);
+	        }
+
+	        // Important ‑ free up resources used running the query
+	        //qe.close();
+	        System.out.println(list);
+	        return list;
+	    }
+	    
+	    
 	    
 	    public static List<JSONObject> describePlantes(String queryString) {
 	        ResultSet resultSet = execQuery(queryString);

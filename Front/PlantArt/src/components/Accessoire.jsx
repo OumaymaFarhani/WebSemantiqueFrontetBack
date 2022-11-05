@@ -28,6 +28,13 @@ export const Accessoire = () => {
         setDataPlante1(res.data)
     });
   },[]);
+  const [DataPlante2, setDataPlante2] = useState([]);
+  useEffect(()=>{
+    axios.get('http://localhost:8089/getTuyau',{})
+    .then(res =>{
+        setDataPlante2(res.data)
+    });
+  },[]);
  
     return (
         <>
@@ -41,6 +48,13 @@ export const Accessoire = () => {
             <Container>
             <Title>PROGRAMATEURS</Title>
              {DataPlante1.map((item) =>(
+                <Product item={item} key={item.id} />
+
+            ))}
+            </Container>
+            <Container>
+            <Title>TUYAU</Title>
+             {DataPlante2.map((item) =>(
                 <Product item={item} key={item.id} />
 
             ))}
